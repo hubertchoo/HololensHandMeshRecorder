@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5941744964903140975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941744964903140973}
+  - component: {fileID: 5941744964903140972}
+  m_Layer: 0
+  m_Name: HandRecorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941744964903140973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941744964903140975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.077979706, y: 0.0736773, z: 0.98966014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5941744964903140972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941744964903140975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d81e489315b4634daba944f05d8ebe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handMeshMaterial: {fileID: 2100000, guid: 0aa94f6cb27c9a640bb68597b6399f18, type: 2}
+  scrubBar: {fileID: 0}
+  recordingJSON: {fileID: 4900000, guid: e3ee20e76cd083f46a2651eab5831a1d, type: 3}
+  leftHandEnabledButton: {fileID: 0}
+  rightHandEnabledButton: {fileID: 0}
+  playRecordingButton: {fileID: 0}
+  recordStartStopButton: {fileID: 0}
+  saveToFileButton: {fileID: 0}
+  setEndFrameButton: {fileID: 0}
+  setStartFrameButton: {fileID: 0}
