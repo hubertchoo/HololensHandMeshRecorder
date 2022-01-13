@@ -54,7 +54,11 @@ This allows a developer to use such recordings for prompts or guides within thei
 
 Each of the above features are saved as their own prefab buttons within the project, and these buttons can be selectively attached into the scene based on the needs of the user. 
 
-https://user-images.githubusercontent.com/19947577/149376214-826941b9-134e-4321-af78-fce77ac0840e.mp4
+
+
+https://user-images.githubusercontent.com/19947577/149418259-7d91fb7c-1484-4800-a2af-cdea324506d5.mp4
+
+
 
 ### Setting up HandMeshRecorder:
 
@@ -90,9 +94,20 @@ The application of actuation can be generally split into two cases:
 
 An example of this is when the recording is of an airtap being performed. In this case, a function can be triggered at the instant that the airtap is performed in the recording to trigger the outcome. 
 
+
+
+https://user-images.githubusercontent.com/19947577/149418290-2bf9bab7-1bac-4b0c-a5c6-ec4d2aea75ee.mp4
+
+
+
 2. Continuous GameObject Manipulation
 
 In this case, the GameObject being manipulated has to have its state continuously stored and available for playback, unlike a one-time function trigger.
+
+
+https://user-images.githubusercontent.com/19947577/149418335-a7f53d32-4aa4-4e5d-9184-1325af058170.mp4
+
+
 
 ### How to include actuation?
 
