@@ -54,6 +54,8 @@ This allows a developer to use such recordings for prompts or guides within thei
 
 Each of the above features are saved as their own prefab buttons within the project, and these buttons can be selectively attached into the scene based on the needs of the user. 
 
+https://raw.githubusercontent.com/hubertchoo/HololensHandMeshRecorder/main/Images/HandMeshRecorderPlayerFeatures.mp4
+
 ### Setting up HandMeshRecorder:
 
 HandMeshRecorder was developed on Unity 2019.4.10f1, using MRTK v2.5.3 and Windows Mixed Reality v4.2.3.
