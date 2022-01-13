@@ -56,6 +56,7 @@ Each of the above features are saved as their own prefab buttons within the proj
 
 
 (Demo of the HandMesh video editor, where recording and editing of the ghost hands are done.)
+
 https://user-images.githubusercontent.com/19947577/149418259-7d91fb7c-1484-4800-a2af-cdea324506d5.mp4
 
 
@@ -95,7 +96,8 @@ The application of actuation can be generally split into two cases:
 An example of this is when the recording is of an airtap being performed. In this case, a function can be triggered at the instant that the airtap is performed in the recording to trigger the outcome. 
 
 
-(Marking a keyframe for a function with the HandMesh video editor
+(Marking a keyframe for a function with the HandMesh video editor)
+
 https://user-images.githubusercontent.com/19947577/149418290-2bf9bab7-1bac-4b0c-a5c6-ec4d2aea75ee.mp4
 
 
@@ -105,6 +107,7 @@ https://user-images.githubusercontent.com/19947577/149418290-2bf9bab7-1bac-4b0c-
 In this case, the GameObject being manipulated has to have its state continuously stored and available for playback, unlike a one-time function trigger.
 
 (Example of how a GameObject can be spawned and recorded together with the ghost hands. Custom GameObjects can be added too.)
+
 https://user-images.githubusercontent.com/19947577/149418335-a7f53d32-4aa4-4e5d-9184-1325af058170.mp4
 
 
