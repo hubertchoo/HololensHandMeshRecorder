@@ -12,6 +12,8 @@ While the Hololens is able to sense and visualise users' hands in real time, the
 
 In fact, the MRTK Hand Coach currently requires developers to manually animate a rigged hand in external software such as Autodesk Maya. (https://docs.microsoft.com/en-us/windows/mixed-reality/design/hand-coach)
 
+<img src="Images/HandCoachMRTK.gif" height="300">
+
 Without extensive experience in animation, there was no way I would be able to animate the realistic behaviour of a hand. 
 
 A utility for anyone to record a ghost of their hand would speed up development, and make user uptake more effective.
@@ -24,13 +26,33 @@ This means that handmesh recordings are now able to contain functions calls that
 
 The ghost hand can now do the same things that the user can do with their hands and gestures.
 
+<p float="left">
+    <img src="Images/ButtonClick_cropped.gif" height="300">
+    <img src="Images/HandPlaneControls_cropped.gif" height="300">
+</p>
+
 ### HandMeshRecorder consists of two scenes:
 - A HandMesh video recorder and editor scene
 - A HandMesh video playback example scene
 
-The purpose of HandMeshRecorder is to allow the recording of user gestures for future playback.
+The purpose of HandMeshRecorder is to allow the recording of user gestures, and the real-time demonstration of its effects for future playback.
 
 This allows a developer to use such recordings for prompts or guides within their app.
+
+### Features of HandMeshRecorder/Editor:
+
+1. Start/Stop Record (With voice activation too)
+2. Play Recording Back
+3. Toggle Right and Left hands visibility 
+4. Scrub Bar
+5. Trim video length
+6. Add/Clear keyframes (Elaborated Below)
+7. Spawn/Delete GameObject (Elaborated Below)
+8. Save recording to file
+9. Load existing recording from file
+10. Actuation using recordings
+
+Each of the above features are saved as their own prefab buttons within the project, and these buttons can be selectively attached into the scene based on the needs of the user. 
 
 ### Setting up HandMeshRecorder:
 
@@ -55,19 +77,6 @@ To turn on HandMeshVisualisation, navigate to MixedRealityToolkit in the scene h
 
 8. To ensure that playback is as real-time as possible, perform your recording with same Time.fixedDeltaTime as the eventual project the playback is to be used in.
 
-### Features of HandMeshRecorder/Editor:
-
-1. Start/Stop Record (With voice activation too)
-2. Play Recording Back
-3. Toggle Right and Left hands visibility 
-4. Scrub Bar
-5. Trim video length
-6. Add/Clear keyframes (Elaborated Below)
-7. Spawn/Delete GameObject (Elaborated Below)
-8. Save recording to file
-9. Load existing recording from file
-
-Each of the above features are saved as their own prefab buttons within the project, and these buttons can be selectively attached into the scene based on the needs of the user. 
 
 ### Why the ability to include actuation?
 Now that we are able to record our hand meshes, we are able to make use of these hand meshes for in-app prompts, similar to the hand coach. However, there are certain instances where developers might like to also display the outcomes of the recorded actions during playback. To do so, devs will currently have to manually code the outcomes and synchronise them with the recording. 
@@ -82,7 +91,6 @@ An example of this is when the recording is of an airtap being performed. In thi
 2. Continuous GameObject Manipulation
 
 In this case, the GameObject being manipulated has to have its state continuously stored and available for playback, unlike a one-time function trigger.
-
 
 ### How to include actuation?
 
