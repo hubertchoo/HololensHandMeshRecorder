@@ -1,16 +1,36 @@
 # HandMeshRecorder
 
-### HandMeshRecorder consists of:
-- A HandMesh video recorder/editor
-- A HandMesh playback function
+### I faced a problem.
+
+I had developed an application for the Microsoft Hololens with the MRTK. Besides its user interface, it had new hand gestures and controls that I designed. The users had to pick all of these up, and how could I demonstrate these to them in the app?
+
+I decided that I should be able to record a ghost of my hand, demonstrating my gestures and interactions. 
+
+### I realised there was no way for me to do it.
+
+While the Hololens is able to sense and visualise users' hands in real time, there currently exists a gap in allowing developers to store such visualisation. 
+
+In fact, the MRTK Hand Coach currently requires developers to manually animate a rigged hand in external software such as Autodesk Maya. (https://docs.microsoft.com/en-us/windows/mixed-reality/design/hand-coach)
+
+Without extensive experience in animation, there was no way I would be able to animate the realistic behaviour of a hand. 
+
+A utility for anyone to record a ghost of their hand would speed up development, and make user uptake more effective.
+
+### But there is more!
+
+Beyond offering merely recording and playback functionalities, the work expanded to include actuation capabilities for recordings. 
+
+This means that handmesh recordings are now able to contain functions calls that will automatically be executed at any point in the duration of its playback, allowing each recording to be more than just visual. 
+
+The ghost hand can now do the same things that the user can do with their hands and gestures.
+
+### HandMeshRecorder consists of two scenes:
+- A HandMesh video recorder and editor scene
+- A HandMesh video playback example scene
 
 The purpose of HandMeshRecorder is to allow the recording of user gestures for future playback.
 
 This allows a developer to use such recordings for prompts or guides within their app.
-
-While the Hololens is able to sense and visualise users' hands in real time, there currently exists a gap in allowing developers to store such visualisation. In fact, the MRTK Hand Coach currently requires developers to manually animate a rigged hand in external software such as Autodesk Maya. (https://docs.microsoft.com/en-us/windows/mixed-reality/design/hand-coach)
-
-Beyond offering merely recording and playback functionalities, the work expanded to include actuation capabilities for recordings. This means that recordings are now able to contain functions calls that will automatically be executed during duration of its playback, allowing each recording to be more than just visual. 
 
 ### Setting up HandMeshRecorder:
 
@@ -20,7 +40,7 @@ There are several MRTK setting changes that users should perform to maximise the
 
 1. It is recommended for HandMeshRecorder to be imported on an empty, separate project in order to maximise framerate and quality of recordings.
 
-2. To playback prior recorded HandMesh in another project, only the HandModel prefab is required in the project.
+2. To play back a prior-recorded HandMesh in another project, only the HandModel prefab is required in the project. Refer to the HandMesh video playback example scene.
 
 3. When the user intends to record his Hand Mesh while using HandMeshRecording, he should ensure that HandMeshVisualisation is turned on. This is not necessary for editing and playback.
 To turn on HandMeshVisualisation, navigate to MixedRealityToolkit in the scene heirarchy, and navigate to MixedRealityToolkit> Input> Hand Tracking. Ensure that a valid HandMeshPrefab is attached and HandMeshVisualization is enabled.
@@ -29,7 +49,7 @@ To turn on HandMeshVisualisation, navigate to MixedRealityToolkit in the scene h
 
 5. Provide permission to Music Library through App Manifest to allow saving of recording data in Music Folder
 
-6. Edit the contents of BaseHandVisualizer.cs to the copy provided in the package. (Line 167)
+6. Edit the contents of BaseHandVisualizer.cs that comes with MRTK to the copy provided in the package. (Line 167)
 
 7. Why are my buttons pink? You must not have installed MRTK.
 
@@ -37,11 +57,11 @@ To turn on HandMeshVisualisation, navigate to MixedRealityToolkit in the scene h
 
 ### Features of HandMeshRecorder/Editor:
 
-1. Start/Stop Record
-2. Playback Recording
+1. Start/Stop Record (With voice activation too)
+2. Play Recording Back
 3. Toggle Right and Left hands visibility 
 4. Scrub Bar
-5. Set Start/End Frame to trim video
+5. Trim video length
 6. Add/Clear keyframes (Elaborated Below)
 7. Spawn/Delete GameObject (Elaborated Below)
 8. Save recording to file
